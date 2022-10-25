@@ -14,10 +14,10 @@ const images = [
 ];
 const arr = []
 const galleryListRef = document.querySelector('ul')
-for (let i = 0; i < images.length; i += 1){
-  const murkup = `<li><img src="${images[i].url}" alt="${images[i].alt}"></li>` 
-  arr.push(murkup)
-}
+images.forEach(element => {const murkup = `<li><img src="${element.url}" alt="${element.alt}"></li>` 
+  arr.push(murkup)  
+});
+
 galleryListRef.insertAdjacentHTML('beforeend', arr.join(''))
 
 console.log(galleryListRef);
