@@ -1,11 +1,11 @@
-const categoryEl = document.getElementsByClassName("item")
-
-console.log("Number of categories :", categoryEl.length );
-for (let i = 0; i < categoryEl.length; i += 1) {
-    const categoryName = categoryEl[i].firstElementChild.textContent
+const categories = document.querySelectorAll(".item")
+console.log(categories);
+console.log("Number of categories :", categories.length );
+categories.forEach(category =>{ const categoryName = category.firstElementChild.textContent
     console.log("Category:", categoryName)
-    const counts = categoryEl[i].querySelectorAll("li").length
-    console.log("Elements:", Number(counts));
-}
+    const counts = category.querySelectorAll("li").length
+    console.log("Elements:", Number(counts))})
+    
+
      
     
