@@ -12,13 +12,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const arr = []
 const galleryListRef = document.querySelector('ul')
-images.map(element => {const murkup = `<li><img src="${element.url}" alt="${element.alt}"></li>` 
-  arr.push(murkup)
-  arr.join("")
+const arr = images.map(element => {return `<li><img src="${element.url}" alt="${element.alt}"></li>` 
 });
 
-galleryListRef.insertAdjacentHTML('beforeend', arr)
+galleryListRef.insertAdjacentHTML('beforeend', arr.join(''))
 
 console.log(galleryListRef);
